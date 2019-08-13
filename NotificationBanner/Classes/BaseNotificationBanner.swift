@@ -319,9 +319,11 @@ open class BaseNotificationBanner: UIView {
     public func show(queuePosition: QueuePosition = .back,
                      bannerPosition: BannerPosition = .top,
                      queue: NotificationBannerQueue = NotificationBannerQueue.default,
-                     on viewController: UIViewController? = nil) {
+                     on viewController: UIViewController? = nil,
+                     edgeInsets: UIEdgeInsets? = nil) {
         parentViewController = viewController
         bannerQueue = queue
+        bannerEdgeInsets = edgeInsets
         show(placeOnQueue: true, queuePosition: queuePosition, bannerPosition: bannerPosition)
     }
     

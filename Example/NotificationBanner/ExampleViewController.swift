@@ -74,8 +74,8 @@ extension ExampleViewController: ExampleViewDelegate {
             banner.onSwipeUp = {
                 self.showAlert(title: "Basic Success Notification Swiped Up", message: "")
             }
-            
-            banner.show(queuePosition: selectedQueuePosition(), bannerPosition: selectedBannerPosition())
+            banner.show(queuePosition: selectedQueuePosition(), bannerPosition: selectedBannerPosition(),
+                        edgeInsets: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
         case 1:
             // Basic Danger Notification
             let banner = NotificationBanner(title: "Basic Danger Notification",
